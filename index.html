@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Israa's Yeah Counter</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  #counter {
+    font-size: 36px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 30px;
+  }
+  #incrementButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  #incrementButton:hover {
+    background-color: #0056b3;
+  }
+  .callout {
+    font-style: italic;
+    color: #999;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>ISRAA'S YEAH COUNTER</h1>
+  <div id="counter">0</div>
+  <button id="incrementButton">Yeah!</button>
+  <div class="callout">Click Above Button</div>
+</div>
+
+<script>
+  let counter = 0;
+  const counterElement = document.getElementById('counter');
+  const incrementButton = document.getElementById('incrementButton');
+  
+  incrementButton.addEventListener('click', () => {
+    counter++;
+    counterElement.textContent = counter;
+  });
+</script>
+
+</body>
+</html>
